@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import withStyles from "react-jss";
 import Dice from "./Dice.js";
 import quotes from "./quotesData";
@@ -75,6 +75,8 @@ const Quotes = ({ classes }) => {
   const q = gsap.utils.selector(el);
   const { contextSafe } = useGSAP({ scope: el });
 
+  // let mm = gsap.matchMedia();
+
   const getQuote = contextSafe(() => {
     if (displayQuote < len - 1) {
       setDisplayQuote((a) => a + 1);
@@ -136,7 +138,7 @@ const Quotes = ({ classes }) => {
     gsap.to(".diceCirc", {
       fill: colors[colorPair].bg,
       duration: 1,
-      opacity: 0.8,
+      opacity: 1,
     });
     // bg shape movement
     gsap.to("#shape", {
@@ -146,6 +148,15 @@ const Quotes = ({ classes }) => {
       ease: "inout",
     });
   }, [q]);
+
+  // mm.add("(max-width: 500px)", () => {
+  //   gsap.to("#shape", {
+  //     x: bgShapePos[0],
+  //     y: bgShapePos[1],
+  //     duration: 3,
+  //     ease: "inout",
+  //   });
+  // });
 
   return (
     <div ref={el}>

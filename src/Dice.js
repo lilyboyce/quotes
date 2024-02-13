@@ -4,9 +4,11 @@ import withStyles from "react-jss";
 const styles = {
   diceRect: {
     cursor: "pointer",
+    willChange: "transform",
   },
   die: {
     cursor: "pointer",
+    willChange: "transform",
   },
 };
 
