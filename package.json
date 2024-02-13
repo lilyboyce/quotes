@@ -2,6 +2,7 @@
   "name": "quotes",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lilyboyce.github.io/quotes/",
   "dependencies": {
     "@gsap/react": "^2.1.0",
     "@testing-library/jest-dom": "^5.17.0",
