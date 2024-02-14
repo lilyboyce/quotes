@@ -178,7 +178,7 @@ const Quotes = ({ classes }) => {
           />
         </div>
         <div className={classes.bgShape}>
-          <BGShape color={"hsla(0, 0%, 100%, 40%)"} radius="1250" />
+          <BGShape color={"hsla(0, 0%, 100%, 50%)"} radius="1250" />
         </div>
       </div>
     </div>

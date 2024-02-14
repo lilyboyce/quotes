@@ -233,6 +233,7 @@ const Dice = ({ getQuote, randomRoll, randomRoll2 }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       overflow="visible"
+      style={{ cursor: "pointer" }}
     >
       <g
         className="die"
