@@ -75,7 +75,7 @@ const Quotes = ({ classes }) => {
   const q = gsap.utils.selector(el);
   const { contextSafe } = useGSAP({ scope: el });
 
-  // let mm = gsap.matchMedia();
+  let mm = gsap.matchMedia();
 
   const getQuote = contextSafe(() => {
     if (displayQuote < len - 1) {
@@ -141,22 +141,22 @@ const Quotes = ({ classes }) => {
       opacity: 1,
     });
     // bg shape movement
+    // gsap.to("#shape", {
+    //   x: bgShapePos[0],
+    //   y: bgShapePos[1],
+    //   duration: 3,
+    //   ease: "inout",
+    // });
+  }, [q]);
+
+  mm.add("(min-width: 500px)", () => {
     gsap.to("#shape", {
       x: bgShapePos[0],
       y: bgShapePos[1],
       duration: 3,
       ease: "inout",
     });
-  }, [q]);
-
-  // mm.add("(max-width: 500px)", () => {
-  //   gsap.to("#shape", {
-  //     x: bgShapePos[0],
-  //     y: bgShapePos[1],
-  //     duration: 3,
-  //     ease: "inout",
-  //   });
-  // });
+  });
 
   return (
     <div ref={el}>
